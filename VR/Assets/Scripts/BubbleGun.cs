@@ -18,7 +18,7 @@ public class BubbleGun : MonoBehaviour
 
     protected void Start()
     {
-        m_InteractableBase = GetComponent<XRGrabInteractable>();
+        m_InteractableBase = this.gameObject.GetComponent<XRGrabInteractable>();
         m_Animator = GetComponent<Animator>();
         m_InteractableBase.selectExited.AddListener(DroppedGun);
         m_InteractableBase.activated.AddListener(TriggerPulled);
